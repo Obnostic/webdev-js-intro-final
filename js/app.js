@@ -113,8 +113,8 @@ while (turn <3) {
 
     console.log("User Guess: " + userGuess);
     console.log("Computer guess: " + targetNumber);
-    console.log(turn);
-    sButtonClicked = !sButtonClicked;
+    console.log("This is Turn "+turn);
+    //sButtonClicked = !sButtonClicked;
     if (userGuess == targetNumber) {
         console.log ("Success!");
         document.getElementById("submit-btn").disabled = true;
@@ -122,23 +122,22 @@ while (turn <3) {
         break;
         } else {console.log("Wrong! Try Again.");
             turn++;
-            submissionBtn.addEventListener("click", function() {
+                submissionBtn.addEventListener("click", function() {
                 if (sButtonClicked) {
                     let userGuess = document.getElementById("guess-input").value;
                 }
-
-
-
             })
     }
 }
-console.log("Sorry pal, you lost!");
-document.getElementById("submit-btn").disabled = true;
-document.getElementById("restart-btn").disabled = false;
 }
 
+//if (turn=3) {console.log("Sorry pal, you lost!");
+//document.getElementById("submit-btn").disabled = true;
+//document.getElementById("restart-btn").disabled = false;
+//}
 
-    //document.getElementById(computerGuess).value = "pending";
+
+  
 
 
 
